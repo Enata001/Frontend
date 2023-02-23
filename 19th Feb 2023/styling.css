@@ -1,0 +1,8 @@
+body{background-color: #000000;color: grey;font-family:"Verdana";}
+.cards{background-color: #1e1e21;border-radius: 5px;height: max-content; width: 100%;margin-block: 5px;display:inline-flex ;}
+.left_items{width: 80%;display: block;padding-left: 20px;padding-right:30px;padding-top: 10px;}
+.right_items{width:20%;margin-block: auto;}
+.story_pic{width: 110px;height: 110px; border-radius: 15px;float: right; margin-right:  20px;}
+.logo{height: 50px;width: 50px;border-radius: 10px;margin-right: 10px;}
+.website{display: flex;}
+p{color: rgb(137, 152, 211)}

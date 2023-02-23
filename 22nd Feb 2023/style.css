@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_circle {
+    border: solid 3px blue;
+    min-width: 70vh;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 50%;
+}
+
+.horizontal {
+    position: relative;
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+}
+
+.smaller_circle {
+    border: 3px solid green;
+    border-radius: 50%;
+    min-width: 8vb;
+    min-height: 8vb;
+}
