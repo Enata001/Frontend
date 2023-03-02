@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-family: "Segoe UI"
+}
+.box {
+  border: solid 4px black;
+  min-width: 660px;
+  min-height: 750px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 165px 165px 165px 165px;
+}
+.grid-item {
+  border: solid 2px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(gainsboro, white);
+}
+.grid-item:hover {
+  background: none;
+  background-color: aliceblue;
+}
+#display {
+  border: solid 1px grey;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  padding: 25px;
+}
+.longer {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
