@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 6</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="shortcut icon" href="./fruit.jpg" type="image/x-icon" />
-  </head>
-  <body>
-    <div class="box">
-      <div id="display"></div>
-      <div class="grid-item longer">Clear</div>
-      <div class="grid-item">/</div>
-      <div class="grid-item">7</div>
-      <div class="grid-item">8</div>
-      <div class="grid-item">9</div>
-      <div class="grid-item">x</div>
-      <div class="grid-item">4</div>
-      <div class="grid-item">5</div>
-      <div class="grid-item">6</div>
-      <div class="grid-item">-</div>
-      <div class="grid-item">1</div>
-      <div class="grid-item">2</div>
-      <div class="grid-item">3</div>
-      <div class="grid-item">+</div>
-      <div class="grid-item longer">0</div>
-      <div class="grid-item">=</div>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 6</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="shortcut icon" href="./fruit.jpg" type="image/x-icon" />
+</head>
+
+<body>
+  <div class="box">
+    <input id="display" type="text" disabled></input>
+    <div class="grid-item longer" onclick="clearall()">Clear</div>
+    <div class="grid-item" data-value="/" onclick="getValue('/')">/</div>
+    <div class="grid-item" id="seven" data-value="7" onclick="getValue(7) ">7</div>
+    <div class="grid-item" data-value="8" onclick="getValue(8) ">8</div>
+    <div class="grid-item" data-value="9" onclick="getValue(9) ">9</div>
+    <div class="grid-item" data-value="*" onclick="getValue('*') ">x</div>
+    <div class="grid-item" data-value="4" onclick="getValue(4) ">4</div>
+    <div class="grid-item" data-value="5" onclick="getValue(5) ">5</div>
+    <div class="grid-item" data-value="6" onclick="getValue(6) ">6</div>
+    <div class="grid-item" data-value="-" onclick="getValue('-') ">-</div>
+    <div class="grid-item" data-value="1" onclick="getValue(1) ">1</div>
+    <div class="grid-item" data-value="2" onclick="getValue(2) ">2</div>
+    <div class="grid-item" data-value="3" onclick="getValue(3) ">3</div>
+    <div class="grid-item" data-value="+" onclick="getValue('+')">+</div>
+    <div class="grid-item longer" data-value="0" onclick="getValue(0)">0</div>
+    <div class="grid-item" data-value="=" onclick="calculateValue()">=</div>
+  </div>
+  <script>
+    var num = 0;
+    function getValue(value) {
+      if (document.getElementById("display").value === 'error') {
+        document.getElementById("display").value = "";
+        num = document.getElementById("display").value += value;
+      }
+      else {
+        num = document.getElementById("display").value += value;
+      }
+
+    }
+    function clearall() {
+      num = "0";
+      display.value = "";
+    }
+    function calculateValue() {
+
+      try {
+        document.getElementById("display").value = eval(num);
+      } catch {
+        document.getElementById("display").value = "error";
+      }
+
+    }
+
+  </script>
+</body>
+
+
+
 </html>
