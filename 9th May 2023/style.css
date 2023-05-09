@@ -1,0 +1,58 @@
+
+*{
+    box-sizing: border-box;
+    /* margin: 0; */
+    padding: 0;
+}
+.body{
+    background-color: white;
+}
+.description {
+  overflow: hidden;
+  background-color: gray;
+  display: none;
+  padding: 2.5em;
+  color: white;
+  border-radius:0 0 10px 10px;
+  font-size: large;
+  margin-bottom: 1em;
+  box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+  transition: all 0.1s ease;
+  
+}
+.show {
+  background-color:gray;
+  color:white;
+  cursor: pointer;
+  padding: 0.5em;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: large;
+  box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+  text-align: left;
+  
+}
+.show::after{
+    content: '\21C2';
+    float: right;
+    text-align: center;
+}
+.active{
+    margin-bottom: 10px;
+    background-color: white;
+    color:gray;
+    margin: 0;
+    
+    
+}
+.active:after {
+    content: "\21be";
+  }
+.show:hover{
+    background-color: white;
+    color:black;
+}
